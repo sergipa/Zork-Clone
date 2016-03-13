@@ -1,4 +1,4 @@
 class exit{
-	bool exitispossible;
-	int coord;
+	location north, east, south, west, down,up;
+
 };

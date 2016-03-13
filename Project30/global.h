@@ -7,5 +7,6 @@ enum location{
 	SUB_FLOOR2,
 	PREBOSS_ROOM,
 	EXPLOSIVE_ROOM,
-	BOSS_ROOM
+	BOSS_ROOM,
+	EMPTY
 };

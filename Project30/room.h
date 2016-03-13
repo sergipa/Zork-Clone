@@ -5,8 +5,14 @@ class room{
 	string room_name;
 	string room_description;
 	location room_location;
+
 public:
-	room(const string& name, const string& description, location location);
+	room();
+	void create_room( location location);
+	
 	string getname()const;
 	string getdesc()const;
+
+
+	~room();
 };
