@@ -57,7 +57,6 @@ void world::move(possible_moves move){
 	case CRYO_ROOM:{
 					   switch (move){
 					   case NORTH: theplayer->move_location(cryo->roomsdirections->north); break;
-					   case SOUTH: theplayer->move_location(cryo->roomsdirections->south); break;
 					   case EAST: theplayer->move_location(cryo->roomsdirections->east); break;
 					   case DOWN: theplayer->move_location(cryo->roomsdirections->down); break;
 					   }
