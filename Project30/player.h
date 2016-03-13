@@ -6,5 +6,6 @@ class player{
 public:
 	player();
 	location get_location() const;
+	void move_location(location newlocation);
 };
 #endif

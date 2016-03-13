@@ -6,3 +6,6 @@ player::player(){
 location player :: get_location() const{
 	return player_location;
 }
+void player::move_location(location newlocation){
+	player_location = newlocation;
+}
