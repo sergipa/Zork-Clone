@@ -1,5 +1,15 @@
 #ifndef GLOBAL
 #define GLOBAL
+enum possible_moves{
+	NORTH,
+	EAST,
+	SOUTH,
+	WEST,
+	UP,
+	DOWN,
+	EXIT,
+	NOT_VALID
+};
 enum location{
 	CRYO_ROOM,
 	WEAPON_ROOM,

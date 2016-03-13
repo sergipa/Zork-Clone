@@ -10,7 +10,10 @@ using namespace std;
 int main(){
 	world* ship = new world;
 	ship->create_world();
+	ship->print_roominfo();
+	while (ship->player_input()){
+		cout << "\n";
+	}
 
-	getchar();
-	return 0;
+		printf("Next move");
 }

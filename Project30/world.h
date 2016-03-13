@@ -1,6 +1,7 @@
 #include "room.h"
 #include "player.h"
 #include <string>
+#include <iostream>
 #ifndef WORLD
 #define WORLD
 using namespace std;
@@ -15,10 +16,14 @@ class world{
 	room* explosive;
 	room* boss;
 
-	player* theplayer;
+	
 public:
+	player* theplayer;
 	world();
 	void create_world();
+	void world::print_roominfo();
+	void world::move(possible_moves move);
+	bool world::player_input();
 	~world();
 };
 #endif

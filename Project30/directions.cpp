@@ -20,7 +20,8 @@ void directions::connect_rooms(location room_location){
 						 south = CRYO_ROOM;
 						 break; }
 	case ROBOT_ROOM:{
-						east = CRYO_ROOM;
+						west = CRYO_ROOM;
+						east = PREBOSS_ROOM;
 						break; }
 	case SUB_FLOOR1:{
 						up = CRYO_ROOM;
@@ -31,8 +32,8 @@ void directions::connect_rooms(location room_location){
 						up = PREBOSS_ROOM;
 						break; }
 	case PREBOSS_ROOM:{
-						  east = ROBOT_ROOM;
-						  west = EXPLOSIVE_ROOM;
+						  west = ROBOT_ROOM;
+						  east = EXPLOSIVE_ROOM;
 						  down = SUB_FLOOR2;
 						  north = BOSS_ROOM;
 						  break; }

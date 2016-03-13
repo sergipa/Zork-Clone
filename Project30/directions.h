@@ -2,7 +2,9 @@
 #ifndef DIRECTIONS
 #define DIRECTIONS
 class directions{
-	location north, east, south, west, down,up;
+	
+public:
+	location north, east, south, west, down, up;
 	directions();
 	void directions::connect_rooms(location room_location);
 };
