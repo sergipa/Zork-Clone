@@ -17,6 +17,8 @@ void player::move_location(location newlocation){
 	 else if ((p_input) == "w" || (p_input) == "west") return WEST;
 	 else if ((p_input) == "u" || (p_input) == "up") return UP;
 	 else if ((p_input) == "d" || (p_input) == "down") return DOWN;
+	 if ((p_input) == "open" || (p_input) == "open door") return OPEN;
+	 if ((p_input) == "close" || (p_input) == "close door") return CLOSE;
 	 else if ((p_input) == "exit") return EXIT;
 	 return NOT_VALID;
  }

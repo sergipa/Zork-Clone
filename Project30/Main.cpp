@@ -15,5 +15,5 @@ int main(){
 		cout << "\n";
 	}
 
-		printf("Next move");
+
 }

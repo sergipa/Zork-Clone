@@ -72,7 +72,17 @@ void world::move(possible_moves move){
 	case ROBOT_ROOM:{
 						switch (move){
 						case WEST: theplayer->move_location(robot->roomsdirections->west); break;
-						case EAST: theplayer->move_location(robot->roomsdirections->east); break;
+						case EAST:{ if (robot->roomsdirections->east_door == OPENED)theplayer->move_location(robot->roomsdirections->east);
+								  else cout << "The door is closed\n";
+							break; }
+						case OPEN: {robot->roomsdirections->east_door = OPENED;
+							preboss->roomsdirections->west_door = OPENED;
+							cout << "You have opened the door\n";
+							break; }
+						case CLOSE:{robot->roomsdirections->east_door = CLOSED;
+							preboss->roomsdirections->west_door = CLOSED;
+							cout << "You have closed the door\n";
+							break; }
 						}
 						break; }
 	case SUB_FLOOR1:{
@@ -92,7 +102,18 @@ void world::move(possible_moves move){
 						  case NORTH: theplayer->move_location(preboss->roomsdirections->north); break;
 						  case SOUTH: theplayer->move_location(preboss->roomsdirections->south); break;
 						  case EAST: theplayer->move_location(preboss->roomsdirections->east); break;
+						  case WEST:{if(preboss->roomsdirections->west_door == OPENED) theplayer->move_location(preboss->roomsdirections->west);
+									else cout << "The door is closed\n"; 
+									break; }
 						  case DOWN: theplayer->move_location(preboss->roomsdirections->down); break;
+						  case OPEN:{ preboss->roomsdirections->west_door = OPENED;
+							  robot->roomsdirections->east_door = OPENED;
+							  cout << "You have opened the door\n";
+							  break; }
+						  case CLOSE:{preboss->roomsdirections->west_door = CLOSED;
+
+							  cout << "You have closed the door\n";
+							  break; }
 						  }
 						  break; }
 	case EXPLOSIVE_ROOM:{
@@ -109,7 +130,7 @@ void world::move(possible_moves move){
 	}
 }
 bool world::player_input(){
-	cout << "\nIn what direction you want to move? N(north)/E(east)/S(south)/W(west)/U(up)/D(down)";
+	cout << "\nIn what direction you want to move? N(north)/E(east)/S(south)/W(west)/U(up)/D(down), you can also open and close doors with open and close commands";
 	string p_input;
 	getline(cin, p_input);
 	possible_moves correcteddinput = theplayer->input_interpretation(p_input);

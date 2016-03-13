@@ -8,6 +8,8 @@ enum possible_moves{
 	UP,
 	DOWN,
 	EXIT,
+	OPEN,
+	CLOSE,
 	NOT_VALID
 };
 enum location{
@@ -20,5 +22,10 @@ enum location{
 	EXPLOSIVE_ROOM,
 	BOSS_ROOM,
 	EMPTY
+};
+enum door_state{
+	OPENED,
+	CLOSED,
+	NO_DOOR
 };
 #endif

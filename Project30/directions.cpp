@@ -1,11 +1,16 @@
 #include "directions.h"
 directions::directions(){
+	north_door = NO_DOOR;
 	north = EMPTY;
+	east_door = NO_DOOR;
 	east = EMPTY;
+	south_door = NO_DOOR;
 	south = EMPTY;
+	west_door = NO_DOOR;
 	west = EMPTY;
 	up = EMPTY;
 	down = EMPTY;
+	
 }
 void directions::connect_rooms(location room_location){
 	switch (room_location){
@@ -21,6 +26,7 @@ void directions::connect_rooms(location room_location){
 						 break; }
 	case ROBOT_ROOM:{
 						west = CRYO_ROOM;
+						east_door = CLOSED;
 						east = PREBOSS_ROOM;
 						break; }
 	case SUB_FLOOR1:{
@@ -32,6 +38,7 @@ void directions::connect_rooms(location room_location){
 						up = PREBOSS_ROOM;
 						break; }
 	case PREBOSS_ROOM:{
+						  west_door = CLOSED;
 						  west = ROBOT_ROOM;
 						  east = EXPLOSIVE_ROOM;
 						  down = SUB_FLOOR2;
