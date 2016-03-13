@@ -1,6 +1,7 @@
-
+#ifndef GLOBAL
+#define GLOBAL
 enum location{
-	CRYO_ROOM = 1,
+	CRYO_ROOM,
 	WEAPON_ROOM,
 	ROBOT_ROOM,
 	SUB_FLOOR1,
@@ -10,3 +11,4 @@ enum location{
 	BOSS_ROOM,
 	EMPTY
 };
+#endif

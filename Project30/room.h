@@ -1,12 +1,15 @@
 #include "global.h"
+#include "directions.h"
 #include <iostream>
+#ifndef ROOM
+#define ROOM
 using namespace std;
 class room{
+public:
 	string room_name;
 	string room_description;
 	location room_location;
 
-public:
 	room();
 	void create_room( location location);
 	
@@ -16,3 +19,4 @@ public:
 
 	~room();
 };
+#endif

@@ -72,7 +72,7 @@
     <ClCompile Include="world.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="exit.h" />
+    <ClInclude Include="directions.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="world.h" />

@@ -1,5 +1,8 @@
 #include "room.h"
+#include "player.h"
 #include <string>
+#ifndef WORLD
+#define WORLD
 using namespace std;
 class world{
 
@@ -12,8 +15,10 @@ class world{
 	room* explosive;
 	room* boss;
 
+	player* theplayer;
 public:
 	world();
 	void create_world();
 	~world();
 };
+#endif

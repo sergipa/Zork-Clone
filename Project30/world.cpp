@@ -2,14 +2,14 @@
 #include "world.h"
 
 world::world(){
-	room* cryo = new room;
-	room* weapon = new room;
-	room* robot = new room;
-	room* sub1 = new room;
-	room* sub2 = new room;
-	room* preboss = new room;
-	room* explosive = new room;
-	room* boss = new room;
+	 cryo = new room;
+	 weapon = new room;
+	 robot = new room;
+	 sub1 = new room;
+	 sub2 = new room;
+	 preboss = new room;
+	 explosive = new room;
+	 boss = new room;
 }
 void world :: create_world(){
 	cryo->create_room(CRYO_ROOM);
